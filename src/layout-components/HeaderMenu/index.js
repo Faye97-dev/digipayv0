@@ -1,9 +1,9 @@
-import React from "react";
-import Select from "react-select";
-import { connect } from "react-redux";
-import { changeRole } from "../../actions/auth";
+import React from 'react';
+import Select from 'react-select';
+import { connect } from 'react-redux';
+import { changeRole } from '../../actions/auth';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   Row,
   Col,
@@ -14,12 +14,12 @@ import {
   Button,
   UncontrolledDropdown,
   DropdownToggle,
-  DropdownMenu,
-} from "reactstrap";
-import { NavLink as NavLinkStrap } from "reactstrap";
+  DropdownMenu
+} from 'reactstrap';
+import { NavLink as NavLinkStrap } from 'reactstrap';
 
-import { Settings, Grid, Users, Layers } from "react-feather";
-import { toast, Slide, Flip, Zoom } from "react-toastify";
+import { Settings, Grid, Users, Layers } from 'react-feather';
+import { toast, Slide, Flip, Zoom } from 'react-toastify';
 
 const HeaderMenu = (props) => {
   const menuDemo = (
@@ -29,8 +29,7 @@ const HeaderMenu = (props) => {
           size="sm"
           color="neutral-dark"
           id="megaMenuPopover"
-          className="mr-3 btn-transition-none"
-        >
+          className="mr-3 btn-transition-none">
           Mega menu
         </Button>
         <UncontrolledPopover
@@ -39,8 +38,7 @@ const HeaderMenu = (props) => {
           trigger="legacy"
           container=".app-header-menu"
           popperClassName="dropdown-mega-menu-lg"
-          className="popover-custom-wrapper popover-max-width"
-        >
+          className="popover-custom-wrapper popover-max-width">
           <Row className="no-gutters">
             <Col xl="4" md="6" className="p-2">
               <div className="divider-v divider-v-lg" />
@@ -52,11 +50,10 @@ const HeaderMenu = (props) => {
                   <NavLinkStrap
                     href="#/"
                     onClick={(e) => e.preventDefault()}
-                    className="pl-2"
-                  >
+                    className="pl-2">
                     <div className="mr-2">
                       <FontAwesomeIcon
-                        icon={["fas", "chevron-right"]}
+                        icon={['fas', 'chevron-right']}
                         className="font-size-xs opacity-3"
                       />
                     </div>
@@ -67,11 +64,10 @@ const HeaderMenu = (props) => {
                   <NavLinkStrap
                     href="#/"
                     onClick={(e) => e.preventDefault()}
-                    className="pl-2"
-                  >
+                    className="pl-2">
                     <div className="mr-2">
                       <FontAwesomeIcon
-                        icon={["fas", "chevron-right"]}
+                        icon={['fas', 'chevron-right']}
                         className="font-size-xs opacity-3"
                       />
                     </div>
@@ -82,11 +78,10 @@ const HeaderMenu = (props) => {
                   <NavLinkStrap
                     href="#/"
                     onClick={(e) => e.preventDefault()}
-                    className="pl-2"
-                  >
+                    className="pl-2">
                     <div className="mr-2">
                       <FontAwesomeIcon
-                        icon={["fas", "chevron-right"]}
+                        icon={['fas', 'chevron-right']}
                         className="font-size-xs opacity-3"
                       />
                     </div>
@@ -97,11 +92,10 @@ const HeaderMenu = (props) => {
                   <NavLinkStrap
                     href="#/"
                     onClick={(e) => e.preventDefault()}
-                    className="pl-2"
-                  >
+                    className="pl-2">
                     <div className="mr-2">
                       <FontAwesomeIcon
-                        icon={["fas", "chevron-right"]}
+                        icon={['fas', 'chevron-right']}
                         className="font-size-xs opacity-3"
                       />
                     </div>
@@ -119,8 +113,7 @@ const HeaderMenu = (props) => {
                     block={true}
                     outline={true}
                     color="first"
-                    size="sm"
-                  >
+                    size="sm">
                     <span className="btn-wrapper--label">Learn more</span>
                   </Button>
                 </NavItem>
@@ -136,11 +129,10 @@ const HeaderMenu = (props) => {
                   <NavLinkStrap
                     href="#/"
                     onClick={(e) => e.preventDefault()}
-                    className="pl-2"
-                  >
+                    className="pl-2">
                     <div className="mr-2">
                       <FontAwesomeIcon
-                        icon={["fas", "chevron-right"]}
+                        icon={['fas', 'chevron-right']}
                         className="font-size-xs opacity-3"
                       />
                     </div>
@@ -151,11 +143,10 @@ const HeaderMenu = (props) => {
                   <NavLinkStrap
                     href="#/"
                     onClick={(e) => e.preventDefault()}
-                    className="pl-2"
-                  >
+                    className="pl-2">
                     <div className="mr-2">
                       <FontAwesomeIcon
-                        icon={["fas", "chevron-right"]}
+                        icon={['fas', 'chevron-right']}
                         className="font-size-xs opacity-3"
                       />
                     </div>
@@ -166,11 +157,10 @@ const HeaderMenu = (props) => {
                   <NavLinkStrap
                     href="#/"
                     onClick={(e) => e.preventDefault()}
-                    className="pl-2"
-                  >
+                    className="pl-2">
                     <div className="mr-2">
                       <FontAwesomeIcon
-                        icon={["fas", "chevron-right"]}
+                        icon={['fas', 'chevron-right']}
                         className="font-size-xs opacity-3"
                       />
                     </div>
@@ -181,11 +171,10 @@ const HeaderMenu = (props) => {
                   <NavLinkStrap
                     href="#/"
                     onClick={(e) => e.preventDefault()}
-                    className="pl-2"
-                  >
+                    className="pl-2">
                     <div className="mr-2">
                       <FontAwesomeIcon
-                        icon={["fas", "chevron-right"]}
+                        icon={['fas', 'chevron-right']}
                         className="font-size-xs opacity-3"
                       />
                     </div>
@@ -200,8 +189,7 @@ const HeaderMenu = (props) => {
                     block={true}
                     outline={true}
                     color="success"
-                    size="sm"
-                  >
+                    size="sm">
                     <span className="btn-wrapper--label">Learn more</span>
                   </Button>
                 </NavItem>
@@ -216,11 +204,10 @@ const HeaderMenu = (props) => {
                   <NavLinkStrap
                     href="#/"
                     onClick={(e) => e.preventDefault()}
-                    className="pl-2"
-                  >
+                    className="pl-2">
                     <div className="mr-2">
                       <FontAwesomeIcon
-                        icon={["fas", "chevron-right"]}
+                        icon={['fas', 'chevron-right']}
                         className="font-size-xs opacity-3"
                       />
                     </div>
@@ -231,11 +218,10 @@ const HeaderMenu = (props) => {
                   <NavLinkStrap
                     href="#/"
                     onClick={(e) => e.preventDefault()}
-                    className="pl-2"
-                  >
+                    className="pl-2">
                     <div className="mr-2">
                       <FontAwesomeIcon
-                        icon={["fas", "chevron-right"]}
+                        icon={['fas', 'chevron-right']}
                         className="font-size-xs opacity-3"
                       />
                     </div>
@@ -249,11 +235,10 @@ const HeaderMenu = (props) => {
                   <NavLinkStrap
                     href="#/"
                     onClick={(e) => e.preventDefault()}
-                    className="pl-2"
-                  >
+                    className="pl-2">
                     <div className="mr-2">
                       <FontAwesomeIcon
-                        icon={["fas", "chevron-right"]}
+                        icon={['fas', 'chevron-right']}
                         className="font-size-xs opacity-3"
                       />
                     </div>
@@ -264,11 +249,10 @@ const HeaderMenu = (props) => {
                   <NavLinkStrap
                     href="#/"
                     onClick={(e) => e.preventDefault()}
-                    className="pl-2"
-                  >
+                    className="pl-2">
                     <div className="mr-2">
                       <FontAwesomeIcon
-                        icon={["fas", "chevron-right"]}
+                        icon={['fas', 'chevron-right']}
                         className="font-size-xs opacity-3"
                       />
                     </div>
@@ -283,8 +267,7 @@ const HeaderMenu = (props) => {
                     block={true}
                     outline={true}
                     color="danger"
-                    className="  btn-sm"
-                  >
+                    className="  btn-sm">
                     <span className="btn-wrapper--label">Learn more</span>
                   </Button>
                 </NavItem>
@@ -297,8 +280,7 @@ const HeaderMenu = (props) => {
         <DropdownToggle
           color="neutral-dark"
           size="sm"
-          className="mr-3 btn-transition-none"
-        >
+          className="mr-3 btn-transition-none">
           Dashboards
         </DropdownToggle>
         <DropdownMenu className="overflow-hidden border-0 bg-midnight-bloom p-3 mt-2">
@@ -317,8 +299,7 @@ const HeaderMenu = (props) => {
                 <a
                   href="#/"
                   onClick={(e) => e.preventDefault()}
-                  className="btn card card-box text-left d-flex justify-content-center p-3 w-100 border-0"
-                >
+                  className="btn card card-box text-left d-flex justify-content-center p-3 w-100 border-0">
                   <div>
                     <Grid className="h1 d-block my-2 text-success" />
                     <div className="font-weight-bold">Projects</div>
@@ -329,8 +310,7 @@ const HeaderMenu = (props) => {
                 <a
                   href="#/"
                   onClick={(e) => e.preventDefault()}
-                  className="btn card card-box text-left d-flex justify-content-center p-3 w-100 border-0"
-                >
+                  className="btn card card-box text-left d-flex justify-content-center p-3 w-100 border-0">
                   <div>
                     <Users className="h1 d-block my-2 text-danger" />
                     <div className="font-weight-bold">Helpdesk</div>
@@ -341,8 +321,7 @@ const HeaderMenu = (props) => {
                 <a
                   href="#/"
                   onClick={(e) => e.preventDefault()}
-                  className="btn card card-box text-left d-flex justify-content-center p-3 w-100 border-0"
-                >
+                  className="btn card card-box text-left d-flex justify-content-center p-3 w-100 border-0">
                   <div>
                     <Settings className="h1 d-block my-2 text-warning" />
                     <div className="font-weight-bold">CRM UI</div>
@@ -353,8 +332,7 @@ const HeaderMenu = (props) => {
                 <a
                   href="#/"
                   onClick={(e) => e.preventDefault()}
-                  className="btn card card-box text-left d-flex justify-content-center p-3 w-100 border-0"
-                >
+                  className="btn card card-box text-left d-flex justify-content-center p-3 w-100 border-0">
                   <div>
                     <Layers className="h1 d-block my-2 text-first" />
                     <div className="font-weight-bold">Customers</div>
@@ -393,19 +371,19 @@ class MySelect extends React.Component {
 
   render() {
     const options = [
-      { value: "SYSADMIN", label: "SYSADMIN" },
-      { value: "RESPONSABLE_AGENCE", label: "RESPONSABLE_AGENCE" },
-      { value: "EMPLOYE_AGENCE", label: "EMPLOYE_AGENCE" },
-      { value: "AGENT_COMPENSATION", label: "AGENT_COMPENSATION" },
-      { value: "CLIENT", label: "CLIENT" },
-      { value: "VENDOR", label: "VENDOR" },
+      { value: 'SYSADMIN', label: 'SYSADMIN' },
+      { value: 'RESPONSABLE_AGENCE', label: 'RESPONSABLE_AGENCE' },
+      { value: 'EMPLOYE_AGENCE', label: 'EMPLOYE_AGENCE' },
+      { value: 'AGENT_COMPENSATION', label: 'AGENT_COMPENSATION' },
+      { value: 'CLIENT', label: 'CLIENT' },
+      { value: 'VENDOR', label: 'VENDOR' }
     ];
 
     const customStyles = {
       control: (styles) => ({
         ...styles,
-        width: "300px",
-      }),
+        width: '300px'
+      })
     };
     return (
       <Select
@@ -422,16 +400,16 @@ class MySelect extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  role: state.auth.role,
+  role: state.auth.role
 });
 
 const mapDispatchToProps = (dispatch) => ({
   changeRole: (role) => {
     dispatch(changeRole(role));
-    toast.success("<h1>Notification successfully opened!</h1>", {
+    /*toast.success("<h1>Notification successfully opened!</h1>", {
       containerId: "B",
-    });
-  },
+    });*/
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(HeaderMenu);
