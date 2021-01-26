@@ -45,22 +45,22 @@
 .app-sidebar-logo {
   display: flex;
   align-items: center;
-  //transition: all 0.5s $app-sidebar-transition;
+  transition: all 0.5s $app-sidebar-transition;
 
   &--icon {
     @include border-radius($border-radius-sm);
-    //width: 40px;
-    //height: 40px;
-    //background: $white;
+    width: 40px;
+    height: 40px;
+    background: $white;
     display: flex;
     align-items: center;
     align-content: center;
-    //box-shadow: 1px 1px 3px rgba($black, 0.2);
+    box-shadow: 1px 1px 3px rgba($black, .2);
 
     img {
-      width: 39px;
+      width: 26px;
       margin: 0 auto;
-      //animation: logo-spin infinite 20s linear;
+      animation: logo-spin infinite 20s linear;
     }
   }
 
@@ -74,7 +74,7 @@
       text-transform: uppercase;
       font-size: $font-size-sm / 1.2;
       color: $white;
-      opacity: 0.7;
+      opacity: .7;
       padding: 4px 0;
     }
 
@@ -92,21 +92,13 @@
 }
 
 @-webkit-keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 // Themes
