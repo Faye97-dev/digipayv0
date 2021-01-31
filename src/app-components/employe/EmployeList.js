@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import clsx from "clsx";
+import clsx from 'clsx';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   Row,
   Table,
@@ -15,12 +15,12 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
-} from "reactstrap";
-import { NavLink as NavLinkStrap } from "reactstrap";
-import Select from "react-select";
-import RcPagination from "rc-pagination";
-import localeInfo from "rc-pagination/lib/locale/en_US";
+  DropdownItem
+} from 'reactstrap';
+import { NavLink as NavLinkStrap } from 'reactstrap';
+import Select from 'react-select';
+import RcPagination from 'rc-pagination';
+import localeInfo from 'rc-pagination/lib/locale/en_US';
 import {
   Settings,
   Filter,
@@ -28,10 +28,10 @@ import {
   Save,
   ArrowDownCircle,
   ArrowUpCircle,
-  Circle,
-} from "react-feather";
+  Circle
+} from 'react-feather';
 
-import { CardBody } from "reactstrap";
+import { CardBody } from 'reactstrap';
 
 export default function EmployeList() {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -40,12 +40,12 @@ export default function EmployeList() {
   const closeSearch = () => setSearchOpen(false);
 
   const statusOptions = [
-    { value: "any", label: "All statuses" },
-    { value: "pending", label: "Pending" },
-    { value: "completed", label: "Completed" },
-    { value: "rejected", label: "Rejected" },
-    { value: "processing", label: "Processing" },
-    { value: "cancelled", label: "Cancelled" },
+    { value: 'any', label: 'All statuses' },
+    { value: 'pending', label: 'Pending' },
+    { value: 'completed', label: 'Completed' },
+    { value: 'rejected', label: 'Rejected' },
+    { value: 'processing', label: 'Processing' },
+    { value: 'cancelled', label: 'Cancelled' }
   ];
 
   return (
@@ -54,12 +54,11 @@ export default function EmployeList() {
         <div className="d-flex justify-content-between px-4 py-3">
           <div
             className={clsx(
-              "search-wrapper search-wrapper--alternate search-wrapper--grow",
-              { "is-active": searchOpen }
-            )}
-          >
+              'search-wrapper search-wrapper--alternate search-wrapper--grow',
+              { 'is-active': searchOpen }
+            )}>
             <span className="icon-wrapper text-black">
-              <FontAwesomeIcon icon={["fas", "search"]} />
+              <FontAwesomeIcon icon={['fas', 'search']} />
             </span>
             <Input
               type="search"
@@ -73,8 +72,7 @@ export default function EmployeList() {
               <DropdownToggle
                 outline
                 color="primary"
-                className="d-flex align-items-center justify-content-center d-40 mr-2 p-0 rounded-pill"
-              >
+                className="d-flex align-items-center justify-content-center d-40 mr-2 p-0 rounded-pill">
                 <Filter className="w-50" />
               </DropdownToggle>
               <DropdownMenu right className="dropdown-menu-xxl p-0">
@@ -89,14 +87,14 @@ export default function EmployeList() {
                         options={statusOptions}
                         theme={(theme) => ({
                           ...theme,
-                          borderRadius: "0.29rem",
+                          borderRadius: '0.29rem',
                           borderWidth: 1,
                           colors: {
                             ...theme.colors,
-                            primary25: "rgba(60,68,177,0.15)",
-                            primary50: "rgba(60,68,177,0.15)",
-                            primary: "#3c44b1",
-                          },
+                            primary25: 'rgba(60,68,177,0.15)',
+                            primary50: 'rgba(60,68,177,0.15)',
+                            primary: '#3c44b1'
+                          }
                         })}
                       />
                     </Col>
@@ -121,8 +119,7 @@ export default function EmployeList() {
                             <NavLinkStrap
                               className="d-flex rounded-sm justify-content-center"
                               href="#/"
-                              onClick={(e) => e.preventDefault()}
-                            >
+                              onClick={(e) => e.preventDefault()}>
                               <div className="nav-link-icon">
                                 <Trash />
                               </div>
@@ -140,8 +137,7 @@ export default function EmployeList() {
                             <NavLinkStrap
                               className="d-flex rounded-sm justify-content-center"
                               href="#/"
-                              onClick={(e) => e.preventDefault()}
-                            >
+                              onClick={(e) => e.preventDefault()}>
                               <div className="nav-link-icon">
                                 <Save />
                               </div>
@@ -159,14 +155,12 @@ export default function EmployeList() {
               <DropdownToggle
                 outline
                 color="primary"
-                className="d-flex align-items-center justify-content-center d-40 p-0 rounded-pill"
-              >
+                className="d-flex align-items-center justify-content-center d-40 p-0 rounded-pill">
                 <Settings className="w-50" />
               </DropdownToggle>
               <DropdownMenu
                 right
-                className="dropdown-menu-lg overflow-hidden p-0"
-              >
+                className="dropdown-menu-lg overflow-hidden p-0">
                 <div className="font-weight-bold px-4 pt-3">Results</div>
                 <Nav className="nav-neutral-first nav-pills-rounded flex-column p-2">
                   <NavItem>
@@ -233,27 +227,23 @@ export default function EmployeList() {
                   <tr>
                     <th
                       className="text-center font-size-lg font-weight-normal   text-dark"
-                      scope="col"
-                    >
+                      scope="col">
                       Nom complet
                     </th>
                     <th
                       className="text-center font-size-lg font-weight-normal   text-dark"
-                      scope="col"
-                    >
+                      scope="col">
                       Adresse
                     </th>
                     <th
                       className="text-center font-size-lg font-weight-normal   text-dark"
-                      scope="col"
-                    >
+                      scope="col">
                       Contact
                     </th>
 
                     <th
                       className="text-center font-size-lg font-weight-normal   text-dark"
-                      scope="col"
-                    >
+                      scope="col">
                       Actions
                     </th>
                   </tr>
@@ -273,8 +263,7 @@ export default function EmployeList() {
                           href="#/"
                           onClick={(e) => e.preventDefault()}
                           className="font-weight-bold text-black-30"
-                          title="..."
-                        >
+                          title="...">
                           42365980
                         </a>
                         <span className="text-black-50 d-block">
@@ -286,10 +275,9 @@ export default function EmployeList() {
                     <td className="text-center">
                       <Button
                         color="primary"
-                        className="mx-1 rounded-sm shadow-none hover-scale-sm d-30 border-0 p-0 d-inline-flex align-items-center justify-content-center"
-                      >
+                        className="mx-1 rounded-sm shadow-none hover-scale-sm d-30 border-0 p-0 d-inline-flex align-items-center justify-content-center">
                         <FontAwesomeIcon
-                          icon={["fas", "eye"]}
+                          icon={['fas', 'eye']}
                           className="font-size-sm"
                         />
                       </Button>
@@ -310,8 +298,7 @@ export default function EmployeList() {
                           href="#/"
                           onClick={(e) => e.preventDefault()}
                           className="font-weight-bold text-black-30"
-                          title="..."
-                        >
+                          title="...">
                           2036589
                         </a>
                         <span className="text-black-50 d-block">
@@ -323,10 +310,9 @@ export default function EmployeList() {
                     <td className="text-center">
                       <Button
                         color="primary"
-                        className="mx-1 rounded-sm shadow-none hover-scale-sm d-30 border-0 p-0 d-inline-flex align-items-center justify-content-center"
-                      >
+                        className="mx-1 rounded-sm shadow-none hover-scale-sm d-30 border-0 p-0 d-inline-flex align-items-center justify-content-center">
                         <FontAwesomeIcon
-                          icon={["fas", "eye"]}
+                          icon={['fas', 'eye']}
                           className="font-size-sm"
                         />
                       </Button>
@@ -347,8 +333,7 @@ export default function EmployeList() {
                           href="#/"
                           onClick={(e) => e.preventDefault()}
                           className="font-weight-bold text-black-30"
-                          title="..."
-                        >
+                          title="...">
                           20140589
                         </a>
                         <span className="text-black-50 d-block">
@@ -360,10 +345,9 @@ export default function EmployeList() {
                     <td className="text-center">
                       <Button
                         color="primary"
-                        className="mx-1 rounded-sm shadow-none hover-scale-sm d-30 border-0 p-0 d-inline-flex align-items-center justify-content-center"
-                      >
+                        className="mx-1 rounded-sm shadow-none hover-scale-sm d-30 border-0 p-0 d-inline-flex align-items-center justify-content-center">
                         <FontAwesomeIcon
-                          icon={["fas", "eye"]}
+                          icon={['fas', 'eye']}
                           className="font-size-sm"
                         />
                       </Button>

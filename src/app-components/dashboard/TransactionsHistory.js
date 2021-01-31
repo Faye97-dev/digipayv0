@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import clsx from "clsx";
+import clsx from 'clsx';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   Row,
   Table,
@@ -17,12 +17,12 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
-} from "reactstrap";
-import { NavLink as NavLinkStrap } from "reactstrap";
-import Select from "react-select";
-import RcPagination from "rc-pagination";
-import localeInfo from "rc-pagination/lib/locale/en_US";
+  DropdownItem
+} from 'reactstrap';
+import { NavLink as NavLinkStrap } from 'reactstrap';
+import Select from 'react-select';
+import RcPagination from 'rc-pagination';
+import localeInfo from 'rc-pagination/lib/locale/en_US';
 import {
   Settings,
   Filter,
@@ -30,15 +30,15 @@ import {
   Save,
   ArrowDownCircle,
   ArrowUpCircle,
-  Circle,
-} from "react-feather";
+  Circle
+} from 'react-feather';
 
-import { CardBody, UncontrolledTooltip, Progress } from "reactstrap";
+import { CardBody, UncontrolledTooltip, Progress } from 'reactstrap';
 
-import avatar4 from "../../assets/images/avatars/avatar4.jpg";
-import avatar5 from "../../assets/images/avatars/avatar5.jpg";
-import avatar6 from "../../assets/images/avatars/avatar6.jpg";
-import avatar7 from "../../assets/images/avatars/avatar7.jpg";
+import avatar4 from '../../assets/images/avatars/avatar4.jpg';
+import avatar5 from '../../assets/images/avatars/avatar5.jpg';
+import avatar6 from '../../assets/images/avatars/avatar6.jpg';
+import avatar7 from '../../assets/images/avatars/avatar7.jpg';
 
 export default function TransactionsHistory() {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -47,17 +47,17 @@ export default function TransactionsHistory() {
   const closeSearch = () => setSearchOpen(false);
 
   const statusOptions = [
-    { value: "any", label: "All statuses" },
-    { value: "pending", label: "Pending" },
-    { value: "completed", label: "Completed" },
-    { value: "rejected", label: "Rejected" },
-    { value: "processing", label: "Processing" },
-    { value: "cancelled", label: "Cancelled" },
+    { value: 'any', label: 'All statuses' },
+    { value: 'pending', label: 'Pending' },
+    { value: 'completed', label: 'Completed' },
+    { value: 'rejected', label: 'Rejected' },
+    { value: 'processing', label: 'Processing' },
+    { value: 'cancelled', label: 'Cancelled' }
   ];
 
   return (
     <>
-      <Card className="card-box shadow-none">
+      <Card className="card-box shadow-none hidden-xs">
         <div className="px-4 pt-4 text-primary">
           <h5 className="font-weight-normal text-dark">
             Historique de transactions
@@ -66,12 +66,11 @@ export default function TransactionsHistory() {
         <div className="d-flex justify-content-between px-4 py-3">
           <div
             className={clsx(
-              "search-wrapper search-wrapper--alternate search-wrapper--grow",
-              { "is-active": searchOpen }
-            )}
-          >
+              'search-wrapper search-wrapper--alternate search-wrapper--grow',
+              { 'is-active': searchOpen }
+            )}>
             <span className="icon-wrapper text-black">
-              <FontAwesomeIcon icon={["fas", "search"]} />
+              <FontAwesomeIcon icon={['fas', 'search']} />
             </span>
             <Input
               type="search"
@@ -85,8 +84,7 @@ export default function TransactionsHistory() {
               <DropdownToggle
                 outline
                 color="primary"
-                className="d-flex align-items-center justify-content-center d-40 mr-2 p-0 rounded-pill"
-              >
+                className="d-flex align-items-center justify-content-center d-40 mr-2 p-0 rounded-pill">
                 <Filter className="w-50" />
               </DropdownToggle>
               <DropdownMenu right className="dropdown-menu-xxl p-0">
@@ -101,14 +99,14 @@ export default function TransactionsHistory() {
                         options={statusOptions}
                         theme={(theme) => ({
                           ...theme,
-                          borderRadius: "0.29rem",
+                          borderRadius: '0.29rem',
                           borderWidth: 1,
                           colors: {
                             ...theme.colors,
-                            primary25: "rgba(60,68,177,0.15)",
-                            primary50: "rgba(60,68,177,0.15)",
-                            primary: "#3c44b1",
-                          },
+                            primary25: 'rgba(60,68,177,0.15)',
+                            primary50: 'rgba(60,68,177,0.15)',
+                            primary: '#3c44b1'
+                          }
                         })}
                       />
                     </Col>
@@ -133,8 +131,7 @@ export default function TransactionsHistory() {
                             <NavLinkStrap
                               className="d-flex rounded-sm justify-content-center"
                               href="#/"
-                              onClick={(e) => e.preventDefault()}
-                            >
+                              onClick={(e) => e.preventDefault()}>
                               <div className="nav-link-icon">
                                 <Trash />
                               </div>
@@ -152,8 +149,7 @@ export default function TransactionsHistory() {
                             <NavLinkStrap
                               className="d-flex rounded-sm justify-content-center"
                               href="#/"
-                              onClick={(e) => e.preventDefault()}
-                            >
+                              onClick={(e) => e.preventDefault()}>
                               <div className="nav-link-icon">
                                 <Save />
                               </div>
@@ -171,14 +167,12 @@ export default function TransactionsHistory() {
               <DropdownToggle
                 outline
                 color="primary"
-                className="d-flex align-items-center justify-content-center d-40 p-0 rounded-pill"
-              >
+                className="d-flex align-items-center justify-content-center d-40 p-0 rounded-pill">
                 <Settings className="w-50" />
               </DropdownToggle>
               <DropdownMenu
                 right
-                className="dropdown-menu-lg overflow-hidden p-0"
-              >
+                className="dropdown-menu-lg overflow-hidden p-0">
                 <div className="font-weight-bold px-4 pt-3">Results</div>
                 <Nav className="nav-neutral-first nav-pills-rounded flex-column p-2">
                   <NavItem>
@@ -245,56 +239,47 @@ export default function TransactionsHistory() {
                   <tr>
                     <th
                       className="text-center font-size-lg font-weight-normal   text-dark"
-                      scope="col"
-                    >
+                      scope="col">
                       Numero
                     </th>
                     <th
                       className=" text-center font-size-lg font-weight-normal   text-dark"
-                      scope="col"
-                    >
+                      scope="col">
                       Date
                     </th>
                     <th
                       className="text-center font-size-lg font-weight-normal   text-dark"
-                      scope="col"
-                    >
+                      scope="col">
                       Agence d'origine
                     </th>
                     <th
                       className="text-center font-size-lg font-weight-normal   text-dark"
-                      scope="col"
-                    >
+                      scope="col">
                       Agence de destination
                     </th>
                     <th
                       className="text-center font-size-lg font-weight-normal   text-dark"
-                      scope="col"
-                    >
+                      scope="col">
                       Destinataire
                     </th>
                     <th
                       className="text-center text-center text-center font-size-lg font-weight-normal   text-dark"
-                      scope="col"
-                    >
+                      scope="col">
                       Montant
                     </th>
                     <th
                       className="text-center font-size-lg font-weight-normal   text-dark"
-                      scope="col"
-                    >
+                      scope="col">
                       Type
                     </th>
                     <th
                       className="text-center font-size-lg font-weight-normal   text-dark"
-                      scope="col"
-                    >
+                      scope="col">
                       Status
                     </th>
                     <th
                       className="text-center font-size-lg font-weight-normal   text-dark"
-                      scope="col"
-                    >
+                      scope="col">
                       Actions
                     </th>
                   </tr>
@@ -313,8 +298,7 @@ export default function TransactionsHistory() {
                           href="#/"
                           onClick={(e) => e.preventDefault()}
                           className="font-weight-bold text-black-30"
-                          title="..."
-                        >
+                          title="...">
                           Agence 1
                         </a>
                         <span className="text-black-50 d-block">
@@ -328,8 +312,7 @@ export default function TransactionsHistory() {
                           href="#/"
                           onClick={(e) => e.preventDefault()}
                           className="font-weight-bold text-black-30"
-                          title="..."
-                        >
+                          title="...">
                           Agence 2
                         </a>
                         <span className="text-black-50 d-block">
@@ -343,8 +326,7 @@ export default function TransactionsHistory() {
                           href="#/"
                           onClick={(e) => e.preventDefault()}
                           className="font-weight-bold text-black-30"
-                          title="..."
-                        >
+                          title="...">
                           Sidi Vall
                         </a>
                         <span className="text-black-50 d-block">41230569</span>
@@ -358,26 +340,23 @@ export default function TransactionsHistory() {
                     <td className="text-center">
                       <Badge
                         className="px-4 py-1 h-auto text-success border-1 border-success"
-                        color="neutral-success"
-                      >
+                        color="neutral-success">
                         RETRAIT
                       </Badge>
                     </td>
                     <td className="text-center">
                       <Badge
                         className="px-4 py-1 h-auto text-danger border-1 border-danger"
-                        color="neutral-danger"
-                      >
+                        color="neutral-danger">
                         CANCELED
                       </Badge>
                     </td>
                     <td className="text-center">
                       <Button
                         color="primary"
-                        className="mx-1 rounded-sm shadow-none hover-scale-sm d-30 border-0 p-0 d-inline-flex align-items-center justify-content-center"
-                      >
+                        className="mx-1 rounded-sm shadow-none hover-scale-sm d-30 border-0 p-0 d-inline-flex align-items-center justify-content-center">
                         <FontAwesomeIcon
-                          icon={["fas", "eye"]}
+                          icon={['fas', 'eye']}
                           className="font-size-sm"
                         />
                       </Button>
